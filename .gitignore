@@ -1,2 +1,2 @@
-不需要提交git的文件.txt
-测试用的.txt
+node_modules
+dist
