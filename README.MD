@@ -156,3 +156,7 @@ initScoreAnim();
 > 项目长大了，"全堆在一起 + 手排 `<script>` 顺序 + 全靠 window 全局"的旧组织方式撑不住了。
 > **模块化**把每个文件的依赖写进代码里、给每个文件一份独立作用域——
 > 这就是工程化迈出的第一步。
+
+
+
+## vite.config.js（Node 默认当成 CommonJS），但文件内部代码写了 ESM 的 import / export 语法,vite新版本不支持这样的混用需要将后缀改成 .mjs
