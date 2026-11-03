@@ -19,6 +19,7 @@ export default function InputCard({ onResult }) {
     try {
       const res = await fetch(`${API}/api/analyze`, {
         method: "POST",
+        credentials: "include",            // ← 新增：带上 cookie
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text }),
       });
