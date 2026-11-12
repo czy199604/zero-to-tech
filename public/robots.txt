@@ -1,0 +1,11 @@
+# 禁止所有UA爬接口
+User-agent: *
+Disallow: /api/
+
+# 禁止GPT相关爬虫
+User-agent: GPTBot
+Disallow: /
+
+# 禁止ClaudeBot
+User-agent: ClaudeBot
+Disallow: /
