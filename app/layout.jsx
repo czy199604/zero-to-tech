@@ -14,6 +14,9 @@ import "../css/nav.css";
 import "../css/cards.css";
 import "../css/lab.css";
 import "../css/responsive.css";
+// 新增：导入 Next Script 组件
+import Script from 'next/script';
+
 
 export const metadata = {
   title: "zero to tech",
@@ -29,6 +32,24 @@ export default function RootLayout({ children }) {
             <main className="page-content">{children}</main>
           </div>
         </div>
+
+        
+        {/* ========== GA4 Google Tag 开始 ========== */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-P48RN4FD4W"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-P48RN4FD4W');
+          `}
+        </Script>
+        {/* ========== GA4 Google Tag 结束 ========== */}
+
+
       </body>
     </html>
   );
